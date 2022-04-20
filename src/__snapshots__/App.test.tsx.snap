@@ -89,6 +89,61 @@ exports[`<App/> renders correctly 1`] = `
             Add
           </button>
         </div>
+        <div
+          class="color-selector"
+        >
+          <p>
+            color
+          </p>
+          <div
+            class="sc-bczRLJ jpaFKB"
+            color="#F44336"
+          >
+            <div
+              class="colorBox"
+            />
+          </div>
+          <div
+            class="sc-bczRLJ hRhsKw"
+            color="#e91E63"
+          >
+            <div
+              class="colorBox"
+            />
+          </div>
+          <div
+            class="sc-bczRLJ iSBFPc"
+            color="#9C27B0"
+          >
+            <div
+              class="colorBox"
+            />
+          </div>
+          <div
+            class="sc-bczRLJ kuBvrP"
+            color="#673AB7"
+          >
+            <div
+              class="colorBox"
+            />
+          </div>
+          <div
+            class="sc-bczRLJ gnilPj"
+            color="#3F51B5"
+          >
+            <div
+              class="colorBox"
+            />
+          </div>
+          <div
+            class="sc-bczRLJ ixagAk"
+            color="#2196F3"
+          >
+            <div
+              class="colorBox"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>
