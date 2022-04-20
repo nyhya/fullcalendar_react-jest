@@ -7,7 +7,6 @@ import ColorSelectorBox from "components/colorSelectorBox";
 import './App.css';
 
 
-
 interface IExternalEvent {
   externalEvents: Array<{
     title: string,
@@ -90,22 +89,34 @@ function App(): JSX.Element {
     }
   }
 
+  /**
+   * @addTextColor 선택한 컬러 값 세팅
+   */
   const addTextColor = (color: string) => {
     textColor = color
-    console.log(textColor);
-
   }
 
+  /**
+   * @function addListItem
+   * @description input value setting
+   */
   const addListItem = (e: React.ChangeEvent<HTMLInputElement>) => {
     tempCreateEvent = e.target.value;
   }
 
 
   const addCreateEvent = () => {
+    /**
+     * input value setting
+     * input color setting 
+     */
     if (tempCreateEvent.length > 0) {
       let colorValue = textColor.length > 0 ? textColor : '#222';
       const value = [{ title: tempCreateEvent, color: colorValue, id: state.externalEvents.length }];
       setState({ ...state, externalEvents: state.externalEvents.concat(value) })
+      /**
+       * input 초기화
+       */
       if (inputRef.current) {
         inputRef.current.value = "";
       }
