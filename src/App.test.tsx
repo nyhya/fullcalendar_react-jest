@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import App from './App';
 
@@ -41,10 +41,25 @@ describe("<App/>", () => {
     /**
      * button 클릭
      */
+    const externalEventList = screen.getByTestId('list');
+    const length = externalEventList.childElementCount;
     const button = screen.getByText('Add');
     fireEvent.click(button);
+    fireEvent.click(button);
+    expect(externalEventList.childElementCount).toBe(length + 2);
+  })
+  
+  test("draggable element", () => {
+    const param = { title: "my event 1", color: "#0097a7", id: 0 };
+    function eventData(param:{ title: string, color: string, id: number }){
+      expect(param).toBe({ title: "my event 1", color: "#0097a7", id: 0 });
+    }
+  })
 
-
+  test("isRun", () => {
+    let isRun = false;
+    expect(isRun).toBeFalsy();
+    
   })
 
 })

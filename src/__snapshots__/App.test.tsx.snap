@@ -1189,7 +1189,7 @@ exports[`<App/> renders correctly 1`] = `
                               </td>
                               <td
                                 aria-labelledby="fc-dom-48"
-                                class="fc-daygrid-day fc-day fc-day-tue fc-day-today "
+                                class="fc-daygrid-day fc-day fc-day-tue fc-day-past"
                                 data-date="2022-04-19"
                                 role="gridcell"
                               >
@@ -1222,7 +1222,7 @@ exports[`<App/> renders correctly 1`] = `
                               </td>
                               <td
                                 aria-labelledby="fc-dom-50"
-                                class="fc-daygrid-day fc-day fc-day-wed fc-day-future"
+                                class="fc-daygrid-day fc-day fc-day-wed fc-day-today "
                                 data-date="2022-04-20"
                                 role="gridcell"
                               >

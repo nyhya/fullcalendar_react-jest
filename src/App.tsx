@@ -6,6 +6,7 @@ import interactionPlugin, { Draggable } from "@fullcalendar/interaction";
 import './App.css';
 
 
+
 interface IExternalEvent{
   externalEvents:Array<{
     title:string,
@@ -23,7 +24,7 @@ let tempCreateEvent = '';
 
 function App():JSX.Element {
   const [state, setState] = useState<IExternalEvent>({externalEvents: [
-    { title: "my event 1", color: "#0097a7", id: 0,  },
+    { title: "my event 1", color: "#0097a7", id: 0 },
     { title: "my event 2", color: "#f44336", id: 1 },
     { title: "my event 3", color: "#f57f17", id: 2 },
     { title: "my event 4", color: "#90a4ae", id: 3 }
@@ -47,11 +48,19 @@ function App():JSX.Element {
   ]});
 
   const inputRef =  useRef<HTMLInputElement>(null);;
+  let isRun = false;
 
-    // load external events
-    useEffect(() => {
+   
+  useEffect(() => {
+    if(!isRun){
+      isRun = true;
+      draggableEvent();
+    }
+  },[]);
+
+    const draggableEvent = () => {
+       // load external events
       let draggableEl = document.getElementById("external-events");
-      
       if(draggableEl){
         new Draggable(draggableEl, {
           itemSelector: ".fc-event",
@@ -59,19 +68,17 @@ function App():JSX.Element {
             let id = eventEl.dataset.id;
             let title = eventEl.getAttribute("title");
             let color = eventEl.dataset.color;
-            let custom = eventEl.dataset.custom;
     
             return {
               id: id,
               title: title,
               color: color,
-              custom: custom,
               create: true
             };
           }
         });
       }
-    },[]);
+    }
 
     const addListItem = (e:React.ChangeEvent<HTMLInputElement>) => {
       tempCreateEvent = e.target.value;
@@ -139,9 +146,3 @@ function App():JSX.Element {
 }
 
 export default App;
-// https://mong-blog.tistory.com/entry/jest%EB%A1%9C-typescript-%ED%85%8C%EC%8A%A4%ED%8A%B8%ED%95%98%EA%B8%B0-1%EA%B8%B0%EB%B3%B8%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0
-// 테스트-커버리지
-// https://inpa.tistory.com/entry/JEST-%F0%9F%93%9A-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BB%A4%EB%B2%84%EB%A6%AC%EC%A7%80-Test-Coverage
-// 테스트-커버리지
-// https://velog.io/@muchogusto/TEST-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BB%A4%EB%9F%AC%EB%A6%AC%EC%A7%80
-// npm run coverage
