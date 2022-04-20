@@ -96,51 +96,57 @@ exports[`<App/> renders correctly 1`] = `
             color
           </p>
           <div
-            class="sc-bczRLJ jpaFKB"
+            class="sc-bczRLJ grVmKH"
             color="#F44336"
           >
             <div
               class="colorBox"
+              data-testid="colorBox"
             />
           </div>
           <div
-            class="sc-bczRLJ hRhsKw"
+            class="sc-bczRLJ huCiMu"
             color="#e91E63"
           >
             <div
               class="colorBox"
+              data-testid="colorBox"
             />
           </div>
           <div
-            class="sc-bczRLJ iSBFPc"
+            class="sc-bczRLJ godIou"
             color="#9C27B0"
           >
             <div
               class="colorBox"
+              data-testid="colorBox"
             />
           </div>
           <div
-            class="sc-bczRLJ kuBvrP"
+            class="sc-bczRLJ bjypvt"
             color="#673AB7"
           >
             <div
               class="colorBox"
+              data-testid="colorBox"
             />
           </div>
           <div
-            class="sc-bczRLJ gnilPj"
+            class="sc-bczRLJ gLyLIV"
             color="#3F51B5"
           >
             <div
               class="colorBox"
+              data-testid="colorBox"
             />
           </div>
           <div
-            class="sc-bczRLJ ixagAk"
+            class="sc-bczRLJ iiBrey"
             color="#2196F3"
           >
             <div
               class="colorBox"
+              data-testid="colorBox"
             />
           </div>
         </div>

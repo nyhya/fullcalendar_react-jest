@@ -33,7 +33,11 @@ function ColorSelectorBox(props: IColorSelectorProps): JSX.Element {
 	return (
 		<>
 			<ColorBox color={color}>
-				<div className="colorBox" onClick={selectColor}></div>
+				<div
+					data-testid="colorBox"
+					className="colorBox"
+					onClick={selectColor}
+				></div>
 			</ColorBox>
 		</>
 	);

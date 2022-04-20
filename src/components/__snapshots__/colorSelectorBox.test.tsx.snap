@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ColorSelectorBox/> renders component correctly 1`] = `
+<div>
+  <div
+    class="sc-bczRLJ grVmKH"
+    color="#F44336"
+  >
+    <div
+      class="colorBox"
+      data-testid="colorBox"
+    />
+  </div>
+</div>
+`;

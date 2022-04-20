@@ -4,7 +4,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin, { Draggable } from '@fullcalendar/interaction';
 import ColorSelectorBox from 'components/colorSelectorBox';
-import './App.css';
+import 'App.css';
 
 interface IExternalEvent {
 	externalEvents: Array<{
@@ -28,7 +28,7 @@ const color: Array<{ idx: number; color: string }> = [
 	{ idx: 6, color: '#2196F3' },
 ];
 let tempCreateEvent = '';
-let textColor = '';
+let colorBg = '';
 
 function App(): JSX.Element {
 	const [state, setState] = useState<IExternalEvent>({
@@ -91,10 +91,10 @@ function App(): JSX.Element {
 	};
 
 	/**
-	 * @addTextColor 선택한 컬러 값 세팅
+	 * @addcolorBg 선택한 컬러 값 세팅
 	 */
-	const addTextColor = (color: string) => {
-		textColor = color;
+	const addcolorBg = (color: string) => {
+		colorBg = color;
 	};
 
 	/**
@@ -111,7 +111,7 @@ function App(): JSX.Element {
 		 * input color setting
 		 */
 		if (tempCreateEvent.length > 0) {
-			const colorValue = textColor.length > 0 ? textColor : '#222';
+			const colorValue = colorBg.length > 0 ? colorBg : '#222';
 			const value = [
 				{
 					title: tempCreateEvent,
@@ -130,6 +130,7 @@ function App(): JSX.Element {
 				inputRef.current.value = '';
 			}
 			tempCreateEvent = '';
+			colorBg = '';
 		} else {
 			alert('내용을 입력해 주세요');
 		}
@@ -185,7 +186,7 @@ function App(): JSX.Element {
 								<ColorSelectorBox
 									key={c.idx}
 									color={c.color}
-									click={addTextColor}
+									click={addcolorBg}
 								/>
 							))}
 						</div>
