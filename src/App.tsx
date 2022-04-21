@@ -40,20 +40,14 @@ function App(): JSX.Element {
 		],
 		calendarEvents: [
 			{
-				// id: 1,
 				title: 'All-day event',
-				// color: "#388e3c",
 				start: '2022-04-01',
 				end: '2022-04-02',
-				// custom: "questo è un campo custom"
 			},
 			{
-				// id: 2,
 				title: 'Timed event',
-				// color: "#0097a7",
 				start: '2022-04-15',
 				end: '2022-04-17',
-				// custom: "custom stuff"
 			},
 		],
 	});
