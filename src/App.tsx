@@ -69,7 +69,6 @@ function App(): JSX.Element {
 	}, []);
 
 	const draggableEvent = () => {
-		// load external events
 		const draggableEl = document.getElementById('external-events');
 		if (draggableEl) {
 			new Draggable(draggableEl, {
@@ -88,13 +87,6 @@ function App(): JSX.Element {
 				},
 			});
 		}
-	};
-
-	/**
-	 * @addcolorBg 선택한 컬러 값 세팅
-	 */
-	const addcolorBg = (color: string) => {
-		colorBg = color;
 	};
 
 	/**
@@ -131,8 +123,6 @@ function App(): JSX.Element {
 			}
 			tempCreateEvent = '';
 			colorBg = '';
-		} else {
-			alert('내용을 입력해 주세요');
 		}
 	};
 
@@ -180,13 +170,17 @@ function App(): JSX.Element {
 							/>
 							<button onClick={addCreateEvent}>Add</button>
 						</div>
+						<div className="select-color"></div>
 						<div className="color-selector">
 							<p>color</p>
 							{color.map(c => (
 								<ColorSelectorBox
+									data-testid={'colorBox'}
 									key={c.idx}
 									color={c.color}
-									click={addcolorBg}
+									click={(color: string) => {
+										colorBg = color;
+									}}
 								/>
 							))}
 						</div>

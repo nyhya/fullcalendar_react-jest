@@ -1,15 +1,19 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
+import ColorSelectorBox from 'components/colorSelectorBox';
+import { shallow } from 'enzyme';
 import App from 'App';
 
 describe('<App/>', () => {
+	const { container } = render(<App />);
 	test('renders correctly', () => {
-		const { container } = render(<App />);
 		/**
 		 * 외부 이벤트 리스트 렌더링
 		 */
 		const externalEventList = screen.getByTestId('list');
 		expect(externalEventList).toBeInTheDocument();
+		expect(externalEventList).not.toBe(null);
+		expect(container.getElementsByClassName('external-box')).toHaveLength(1);
 
 		/**
 		 * input 렌더링
@@ -57,5 +61,14 @@ describe('<App/>', () => {
 	test('isRun', () => {
 		const isRun = false;
 		expect(isRun).toBeFalsy();
+	});
+
+	test('', () => {
+		const handlerClick = jest.fn();
+		render(<ColorSelectorBox color="#F44336" click={handlerClick} />);
+		const color = screen.getByTestId('colorBox');
+		expect(handlerClick).toHaveBeenCalledTimes(0);
+		fireEvent.click(color);
+		expect(handlerClick).toHaveBeenCalledTimes(1);
 	});
 });

@@ -90,6 +90,9 @@ exports[`<App/> renders correctly 1`] = `
           </button>
         </div>
         <div
+          class="select-color"
+        />
+        <div
           class="color-selector"
         >
           <p>
@@ -1283,7 +1286,7 @@ exports[`<App/> renders correctly 1`] = `
                               </td>
                               <td
                                 aria-labelledby="fc-dom-50"
-                                class="fc-daygrid-day fc-day fc-day-wed fc-day-today "
+                                class="fc-daygrid-day fc-day fc-day-wed fc-day-past"
                                 data-date="2022-04-20"
                                 role="gridcell"
                               >
@@ -1316,7 +1319,7 @@ exports[`<App/> renders correctly 1`] = `
                               </td>
                               <td
                                 aria-labelledby="fc-dom-52"
-                                class="fc-daygrid-day fc-day fc-day-thu fc-day-future"
+                                class="fc-daygrid-day fc-day fc-day-thu fc-day-today "
                                 data-date="2022-04-21"
                                 role="gridcell"
                               >
