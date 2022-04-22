@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import ColorSelectorBox from 'components/colorSelectorBox';
+import ColorSelectorBox from '../components/color-selector/color-selector-box';
 import { shallow } from 'enzyme';
-import App from 'App';
+import App from './app';
 
 describe('<App/>', () => {
 	const { container } = render(<App />);
@@ -65,7 +65,7 @@ describe('<App/>', () => {
 
 	test('', () => {
 		const handlerClick = jest.fn();
-		render(<ColorSelectorBox color="#F44336" click={handlerClick} />);
+		render(<ColorSelectorBox color="#F44336" onClick={handlerClick} />);
 		const color = screen.getByTestId('colorBox');
 		expect(handlerClick).toHaveBeenCalledTimes(0);
 		fireEvent.click(color);
