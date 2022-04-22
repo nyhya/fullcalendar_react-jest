@@ -20,26 +20,25 @@ const ColorBox = styled.div`
 	}
 `;
 
-interface IColorSelectorProps {
+interface ColorSelectorBoxProps {
 	color: string;
-	click: (color: string) => void;
+	onClick: (color: string) => void;
 }
 
-function ColorSelectorBox(props: IColorSelectorProps): JSX.Element {
-	const { color, click } = props;
-	const selectColor = () => {
-		click(color);
-	};
+export function ColorSelectorBox({
+	onClick,
+	color,
+}: ColorSelectorBoxProps): JSX.Element {
 	return (
-		<>
-			<ColorBox color={color}>
-				<div
-					data-testid="colorBox"
-					className="colorBox"
-					onClick={selectColor}
-				></div>
-			</ColorBox>
-		</>
+		<ColorBox color={color}>
+			<div
+				data-testid="colorBox"
+				className="colorBox"
+				onClick={() => {
+					onClick(color);
+				}}
+			></div>
+		</ColorBox>
 	);
 }
 

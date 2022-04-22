@@ -621,7 +621,7 @@ exports[`<App/> renders correctly 1`] = `
                                       style="margin-top: 0px;"
                                     >
                                       <a
-                                        class="fc-daygrid-event fc-daygrid-block-event fc-h-event fc-event fc-event-start fc-event-end fc-event-past"
+                                        class="fc-daygrid-event fc-daygrid-block-event fc-h-event fc-event fc-event-draggable fc-event-resizable fc-event-start fc-event-end fc-event-past"
                                       >
                                         <div
                                           class="fc-event-main"
@@ -640,6 +640,9 @@ exports[`<App/> renders correctly 1`] = `
                                             </div>
                                           </div>
                                         </div>
+                                        <div
+                                          class="fc-event-resizer fc-event-resizer-end"
+                                        />
                                       </a>
                                     </div>
                                     <div
@@ -1117,7 +1120,7 @@ exports[`<App/> renders correctly 1`] = `
                                       style="top: 0px; left: 0px; right: 0px;"
                                     >
                                       <a
-                                        class="fc-daygrid-event fc-daygrid-block-event fc-h-event fc-event fc-event-start fc-event-end fc-event-past"
+                                        class="fc-daygrid-event fc-daygrid-block-event fc-h-event fc-event fc-event-draggable fc-event-resizable fc-event-start fc-event-end fc-event-past"
                                       >
                                         <div
                                           class="fc-event-main"
@@ -1136,6 +1139,9 @@ exports[`<App/> renders correctly 1`] = `
                                             </div>
                                           </div>
                                         </div>
+                                        <div
+                                          class="fc-event-resizer fc-event-resizer-end"
+                                        />
                                       </a>
                                     </div>
                                     <div
@@ -1319,7 +1325,7 @@ exports[`<App/> renders correctly 1`] = `
                               </td>
                               <td
                                 aria-labelledby="fc-dom-52"
-                                class="fc-daygrid-day fc-day fc-day-thu fc-day-today "
+                                class="fc-daygrid-day fc-day fc-day-thu fc-day-past"
                                 data-date="2022-04-21"
                                 role="gridcell"
                               >
@@ -1352,7 +1358,7 @@ exports[`<App/> renders correctly 1`] = `
                               </td>
                               <td
                                 aria-labelledby="fc-dom-54"
-                                class="fc-daygrid-day fc-day fc-day-fri fc-day-future"
+                                class="fc-daygrid-day fc-day fc-day-fri fc-day-today "
                                 data-date="2022-04-22"
                                 role="gridcell"
                               >
